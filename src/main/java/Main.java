@@ -19,14 +19,16 @@ public class Main {
     int[] soma = new int[tamanho + 1];
 
     for (int i = 0; i < tamanho; i++) {
-      soma[i] = a[i] + b[i];
+      int valueA = (i < a.length) ? a[i] : 0;
+      int valueB = (i < b.length) ? b[i] : 0;
+      soma[i] = valueA + valueB;
     }
 
     return soma;
   }
 
   @Test
-  void validaSomaDeVetores() {
+  public void validaSomaDeVetores() {
 
     // 321
     int[] A = { 1, 2, 3 };
